@@ -6,11 +6,8 @@ from appium.webdriver.common.appiumby import AppiumBy
 cap:Dict[str, Any]={
     "platformName": "android",
     "automationName": "UIAutomator2",
-    "deviceName": "android",
-    "appPackage": "com.android.settings",
-    "appActivity": ".Settings",
-    "language": "en",
-    "locale": "US"
+    "deviceName": "android"
+
 
 }
 
@@ -18,8 +15,9 @@ url = 'http://localhost:4723'
 
 driver = webdriver.Remote(url, options=AppiumOptions().load_capabilities(cap))
 
-el = driver.find_element(by=AppiumBy.XPATH, value='//*[@text="Battery"]')
+el = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value='YouTube')
 
 el.click()
 
+driver.find_element(by=AppiumBy.XPATH, value='//*[@text="Search YouTube"]').send_keys("Merciful Servant")
 # driver.quit()
