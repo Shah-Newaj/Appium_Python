@@ -13,6 +13,7 @@ cap:Dict[str, Any]={
 
 url = 'http://localhost:4723'
 
+# use of XPATH
 driver = webdriver.Remote(url, options=AppiumOptions().load_capabilities(cap))
 
 el = driver.find_element(by=AppiumBy.XPATH, value='//android.widget.TextView[@content-desc="YouTube"]')

@@ -15,6 +15,7 @@ cap:Dict[str, Any]={
 
 url = 'http://localhost:4723'
 
+# Use od id
 driver = webdriver.Remote(url, options=AppiumOptions().load_capabilities(cap))
 
 el = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value='YouTube')
