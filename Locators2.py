@@ -23,5 +23,5 @@ time.sleep(5)
 driver.find_element(by=AppiumBy.XPATH, value='//android.widget.ImageView[@content-desc="Search"]').click()
 driver.find_element(by=AppiumBy.XPATH, value='//*[@text="Search YouTube"]').send_keys("Merciful Servant")
 
-# time.sleep(5)
+# time.sleep(3)
 # driver.quit()
