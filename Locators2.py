@@ -18,10 +18,11 @@ driver = webdriver.Remote(url, options=AppiumOptions().load_capabilities(cap))
 
 el = driver.find_element(by=AppiumBy.XPATH, value='//android.widget.TextView[@content-desc="YouTube"]')
 el.click()
-time.sleep(5)
+time.sleep(10)
 
 driver.find_element(by=AppiumBy.XPATH, value='//android.widget.ImageView[@content-desc="Search"]').click()
+time.sleep(5)
 driver.find_element(by=AppiumBy.XPATH, value='//*[@text="Search YouTube"]').send_keys("Merciful Servant")
 
-# time.sleep(3)
+# time.sleep(3)l
 # driver.quit()
