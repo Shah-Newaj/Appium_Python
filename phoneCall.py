@@ -18,7 +18,7 @@ cap:Dict[str, Any]={
 
 url = 'http://localhost:4723'
 
-# This is the first demo
+# open dialer make call then end call
 driver = webdriver.Remote(url, options=AppiumOptions().load_capabilities(cap))
 
 driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value='Phone').click()
