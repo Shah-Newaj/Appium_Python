@@ -21,9 +21,11 @@ url = 'http://localhost:4723'
 # add new contacts
 driver = webdriver.Remote(url, options=AppiumOptions().load_capabilities(cap))
 driver.implicitly_wait(50)
-# time.sleep(10)
-driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value='Create contact').click()
 
+driver.find_element(by=AppiumBy.ID, value='android:id/button2').click()
+driver.find_element(by=AppiumBy.ID, value='com.android.permissioncontroller:id/permission_allow_button').click()
+
+driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value='Create contact').click()
 driver.find_element(by=AppiumBy.XPATH, value='//android.widget.EditText[@text="First name"]').send_keys('Shah')
 driver.find_element(by=AppiumBy.XPATH, value='//android.widget.EditText[@text="Last name"]').send_keys('Newaj')
 driver.find_element(by=AppiumBy.XPATH, value='//android.widget.EditText[@text="Phone"]').send_keys('01741')
