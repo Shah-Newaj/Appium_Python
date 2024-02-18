@@ -17,7 +17,7 @@ cap:Dict[str, Any]={
 
 url = 'http://localhost:4723'
 
-# add new contacts using recorded script
+# Scrolling in view
 driver = webdriver.Remote(url, options=AppiumOptions().load_capabilities(cap))
 driver.implicitly_wait(50)
 
