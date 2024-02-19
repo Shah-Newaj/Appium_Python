@@ -37,10 +37,15 @@ el3 = driver.find_element(by=AppiumBy.XPATH,
 el3.click()
 el4 = driver.find_element(by=AppiumBy.ID, value="com.hmh.api:id/two_buttons")
 el4.click()
+
+el6 = wait.until(EC.presence_of_element_located((AppiumBy.XPATH, "//android.widget.TextView[@resource-id='android:id/alertTitle']")))
+print(el6.text)
+
 el5 = wait.until(EC.presence_of_element_located((AppiumBy.ID, "android:id/button1")))
 el5.click()       # click on Ok
 
 # driver.switch_to.alert.accept()  # click on Ok
 # driver.switch_to.alert.dismiss()     # click on Cancel
+
 
 
